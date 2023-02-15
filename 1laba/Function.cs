@@ -15,6 +15,9 @@
 
         Console.WriteLine();
         
+        sum = 1 - x;
+        Console.WriteLine(sum);
+        
         for (int i = 0; i <= n; i++)
         {
             if (n < 0)
