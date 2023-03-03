@@ -8,28 +8,22 @@
         Console.WriteLine("Введите х: ");
         double x = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine("Введите кол-во шагов: ");
+        Console.WriteLine("Введите кол-во иттераций: ");
         int n = Convert.ToInt32(Console.ReadLine());
 
-        if (n < 0) Console.WriteLine("Отрицательное кол-во шагов");
+        if (n < 0) {
+            Console.WriteLine("Ошибка! Вы ввели отрицательное кол-во иттераций");
+            System.Environment.Exit(0);
+        }
 
         Console.WriteLine();
-        
-        sum = 1 - x;
         Console.WriteLine(sum);
         
         for (int i = 0; i <= n; i++)
         {
-            if (n < 0)
-            {
-                break;
-            }
-            else
-            {
-                x = (Math.Pow(-1, i) * Math.Pow(x, i) / (getFactorial(i)));
-                sum += x;
-                Console.WriteLine(sum);
-            }
+            x = (Math.Pow(-1, i) * Math.Pow(x, i) / (getFactorial(i)));
+            sum += x;
+            Console.WriteLine("Сумма иттерации № " + i + " = " + sum);            
         }
     }
     public static int getFactorial(int f)
