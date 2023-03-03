@@ -15,10 +15,6 @@
             Console.WriteLine("Ошибка! Вы ввели отрицательное кол-во иттераций");
             System.Environment.Exit(0);
         }
-
-        Console.WriteLine();
-        Console.WriteLine(sum);
-        
         for (int i = 0; i <= n; i++)
         {
             x = (Math.Pow(-1, i) * Math.Pow(x, i) / (getFactorial(i)));
